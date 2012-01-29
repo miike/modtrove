@@ -1,0 +1,6 @@
+<html><head>
+<meta http-equiv=REFRESH CONTENT="15; URL=test.php"> 
+</head>
+<body>
+
+<?phpdefine('FPDF_FONTPATH','font/');require('fpdf.php');require('../include/functions.php');class PDF extends FPDF{function makeorderpage($orderid){$this->AddPage();//header & FOOTER$this->Image('img/logolg.jpg', 5, 5, 25);$this->Image('img/susu.jpg', 195, 5, 20);$this->SetFont('Arial','',10);$text = $GLOBALS['cinfo']['name'].", ".$GLOBALS['cinfo']['address1'].", ";$this->Text(5,96,$text);$text = $GLOBALS['cinfo']['address2'].", ".$GLOBALS['cinfo']['address3'].", ".$GLOBALS['cinfo']['town'].", ".$GLOBALS['cinfo']['postcode'].".";$this->Text(5,100,$text);$text = "Phone: ".$GLOBALS['cinfo']['phone']." Email: ".$GLOBALS['cinfo']['email'].", Web: ".$GLOBALS['cinfo']['web'];$this->Text(5,104,$text);//end header$this->SetLineWidth(0.4);$this->SetDrawColor(51,51,204);$this->Rect(38,15,100,22);$this->SetFont('Arial','B',12);$text = "Student ID:";$this->Text(40,20,$text);$text = "Name:";$this->Text(40,25,$text);$text = "Email:";$this->Text(40,30,$text);$text = "Order Id:";$this->Text(40,35,$text);/*$sql="SELECT custid FROM orders Where orderid = $orderid";$res= runQuery($sql,'envolope');$row = mysql_fetch_array($res);$custid = $row['custid'];*/}}$pdf=new PDF('L','mm','dl');$pdf->makeorderpage(1);$pdf->Output(57);?>  

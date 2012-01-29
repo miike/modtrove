@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /search/
+Disallow: /index/
+Disallow: /admin/
+Disallow: /style/
+Disallow: /inc/
+Sitemap: http://blog.debian/sitemap.xml

@@ -1,0 +1,4 @@
+RewriteEngine  on
+RewriteBase    /uri
+RewriteCond %{REQUEST_URI} !\.php
+RewriteRule    ^(.+)$      /uri/index.php?uri=$1 

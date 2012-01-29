@@ -1,0 +1,70 @@
+html{
+	background:#DDDDDD;
+}
+
+body{
+	background:#DDDDDD;
+}
+
+a {
+	color:#a60000;
+}
+a:hover {
+	color:#bc002c;
+}
+
+.body_pop #page{
+	border: 1px solid #BBBBBB;
+}
+
+#top_bit{
+	border-color: #BBBBBB;
+}
+
+#header{
+	background: #bc002c;
+	border-color: #BBBBBB;
+}
+
+#footer{
+	background:#DDDDDD;
+}
+
+#content{
+	border: 1px solid #BBBBBB;
+}
+
+.containerPost .timestamp,
+.containerComments .timestampComment{
+	color:#666666;
+}
+
+.containerPost .dataBox{
+	border:2px solid #bc002c;
+}
+
+
+.containerPost .dataPic{
+	border: 1px solid #bc002c;
+}
+
+.containerPost .postLinkedItems{
+		border:2px solid #bc002c;
+}
+
+
+.searchBox{
+	border: 1px solid #DDD;
+}
+
+.dialog{
+	border: 2px solid #bc002c;
+}
+
+.dialog h2{
+	background: #bc002c;
+}
+
+.table_st{
+	border: 1px solid #bc002c;
+}

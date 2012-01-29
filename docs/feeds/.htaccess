@@ -1,0 +1,4 @@
+RewriteEngine  on
+RewriteBase    /feeds
+RewriteCond %{REQUEST_URI} !\.php
+RewriteRule    ^(.*)$      /feeds.php?uri=$1 

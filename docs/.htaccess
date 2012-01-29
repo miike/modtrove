@@ -1,0 +1,21 @@
+RewriteEngine  on
+RewriteBase    /
+RewriteRule    ^(.+)/sitemap\.xml\.gz$      /sitemaps/$1.xml.gz
+RewriteCond %{REQUEST_URI} !^/version
+RewriteCond %{REQUEST_URI} !^/api
+RewriteCond %{REQUEST_URI} !^/data
+RewriteCond %{REQUEST_URI} !^/cache
+RewriteCond %{REQUEST_URI} !^/search
+RewriteCond %{REQUEST_URI} !^/style
+RewriteCond %{REQUEST_URI} !^/inc
+RewriteCond %{REQUEST_URI} !^/admin
+RewriteCond %{REQUEST_URI} !^/user
+RewriteCond %{REQUEST_URI} !^/java
+RewriteCond %{REQUEST_URI} !^/openid
+RewriteCond %{REQUEST_URI} !^/uri
+RewriteCond %{REQUEST_URI} !\.php
+RewriteCond %{REQUEST_URI} !\.class
+RewriteCond %{REQUEST_URI} !\.txt
+RewriteCond %{REQUEST_URI} !^/sitemap.xml
+RewriteCond %{REQUEST_URI} !\.xml\.gz
+RewriteRule    ^(.+)$      /blog.php?uri=$1

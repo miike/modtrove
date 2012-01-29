@@ -1,0 +1,9 @@
+RewriteEngine  on
+RewriteBase    /data
+RewriteCond %{REQUEST_URI} !^/data/files
+RewriteCond %{REQUEST_URI} !\.php
+RewriteRule    ^(.*)$      /data_pre.php?uri=$1 
+RewriteBase    /data/files
+RewriteCond %{REQUEST_URI} ^/data/files
+RewriteCond %{REQUEST_URI} !\.php
+RewriteRule    ^files\/(.*)$      /getdata.php?uri=$1 

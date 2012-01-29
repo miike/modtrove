@@ -1,0 +1,4 @@
+RewriteEngine  on
+RewriteBase    /search
+RewriteCond %{REQUEST_URI} !\.php
+RewriteRule    ^(.*)$      /search.php?uri=$1 

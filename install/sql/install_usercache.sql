@@ -1,0 +1,1 @@
+ALTER TABLE  `users` ADD  `user_cache` DATETIME NOT NULL;

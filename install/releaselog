@@ -1,0 +1,24 @@
+LabTrove 2.2-r310 (2012-01-25)
+----------------------------------------------------------------
+[*] Posts: Fixes urls with out http in bbcode parser
+[*] Posts: Fixes "Edits to Post are lost when adding a Sketch" have also fixed upload of data items
+[*] Posts: Fixes "Wide picture/text obscures the RH Menu"
+[*] Templates: Metadata now editable.
+
+
+LabTrove 2.2-r302 (2012-01-17)
+----------------------------------------------------------------
+[*] Data: Fixed private data item preview
+
+
+LabTrove 2.2-r301 (2012-01-17)
+----------------------------------------------------------------
+[*] Data: Added some legacy code for databases that haven't been updated
+[*] Posts: Updated metadata input boxes
+[*] Posts: add a self-resizing 'Reason for Edit' box and rework the surrounding form layout
+[*] Blogs: added some helpful messaged when creating or updating a blog
+[*] Added main LabTrove licence
+[*] Fixed some more of the spurious 
+[*] Api fixes for non root instances
+
+

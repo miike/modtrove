@@ -1,0 +1,10 @@
+RewriteEngine  on
+RewriteBase    /user
+RewriteCond %{REQUEST_URI} !\.php
+RewriteCond %{REQUEST_URI} !^/style
+RewriteCond %{REQUEST_URI} !^/inc
+RewriteCond %{REQUEST_URI} !^/feeds
+RewriteCond %{REQUEST_URI} !^/admin
+RewriteCond %{REQUEST_URI} !^/uri
+RewriteCond %{REQUEST_URI} !^/java
+RewriteRule    ^(.+)$      /user.php?uri=$1 

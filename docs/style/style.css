@@ -1,0 +1,97 @@
+.with_user{
+	background: url("../inc/icons/user.png") no-repeat left center;
+	padding-left:18px;
+}
+
+#link_newpost{
+	background: url("../inc/icons/layout_add.png") no-repeat left bottom;
+	padding-left:18px;
+}
+
+#link_setting{
+	background: url("../inc/icons/cog.png") no-repeat left bottom;
+	padding-left:18px;
+}
+	
+#link_upload{
+	background: url("../inc/icons/folder_add.png") no-repeat left bottom;
+	padding: 2px 2px 2px 18px;
+}
+
+#link_sketch{
+	background: url("../inc/icons/image_add.png") no-repeat left bottom;
+	padding: 2px 2px 2px 18px;
+}
+
+.msg{
+	max-width: 400px;
+	margin: 5px auto 10px auto;
+	padding: 10px 10px 10px 35px;
+	font-size:10pt;
+}
+
+.msg.error{
+	background: url('../inc/icons/exclamation.png') no-repeat 10px 10px  #ffcccc;
+	border: 2px solid #ff2222; 
+}
+.msg.message{
+	background: url('../inc/icons/information.png') no-repeat 10px 10px  #99CCFF;
+	border: 2px solid #004DFF; 
+}
+.msg.warning{
+	background: url('../inc/icons/error.png') no-repeat 10px 10px  #fff999;
+	border: 2px solid #FFD700; 
+}
+
+.msg .msg_close{
+	float: right;
+	margin:-10px -7px 0px 0px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.msg.error .msg_close{
+	color: #ff2222; 
+}
+.msg.message .msg_close{
+	color: #004DFF; 
+}
+.msg.warning .msg_close{
+	color: #fff000; 
+}
+
+.required.error{
+	border: 1px solid #ff2222; 	
+}
+
+label.error{
+	color: #ff2222; 	
+	display:block;
+}
+
+form .formreq{
+	font-size:120%;
+	color:red;
+}
+
+.button{
+	cursor: pointer;
+	background: url("../inc/icons/cursor.png") no-repeat left center;
+	padding: 2px 2px 2px 18px;
+}
+
+.button.icononly{
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	margin: 0px 1px -2px 1px;
+	padding: 0px;
+	background: url("../inc/icons/cursor.png") no-repeat center center;
+}
+
+.button.withbox{
+	padding: 4px 4px 4px 22px;
+	margin: 0px 2px 0px 2px;
+	background: url("../inc/icons/cursor.png") no-repeat 2px center;
+	border: 1px solid #0071bc
+}

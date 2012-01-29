@@ -1,0 +1,282 @@
+html{
+	background:#DDDDDD;
+	margin:0px;
+	padding:0px;
+}
+
+body{
+	background:#DDDDDD;
+	margin:0px;
+	padding:0px;
+	font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Helvetica, Arial, sans-serif;
+	font-size: 12px;
+}
+
+h1, h2, h3, h4{
+	margin:0px;
+	padding: 0px;
+}
+
+a {
+	color:#0054a6;
+	text-decoration:none;
+}
+a:hover {
+	color:#0071bc;
+	text-decoration:underline;
+}
+
+.body_main #page{
+	width:800px;
+	margin:0px auto;
+	background: white;
+}
+
+.body_pop #page{
+	margin: 10px 5px 0px 5px;
+	padding:5px;
+	background: white;
+	border: 1px solid #BBBBBB;
+}
+
+#top_bit{
+	padding:3px;
+	border-color: #BBBBBB;
+	border-style: solid;
+	border-width: 0px 1px 1px 1px;
+}
+
+#header{
+	background: #0071bc;
+	padding:20px;
+
+	color:white;
+	border-color: #BBBBBB;
+	border-style: solid;
+	border-width: 0px 1px;
+}
+
+#header #sitetitle {
+	font-size:210%;
+	float:right;
+	cursor:pointer;
+} 
+
+#header #blogtitle{
+	margin-top: 20px;
+}
+
+#header #blogtitle h1{
+	margin-top: 50px;
+	font-size:250%;
+}
+#header span{
+	font-size:80%;
+}
+#header a {
+	color:white;
+}
+#footer{
+	
+	
+	background:#DDDDDD;
+	
+	padding: 20px;
+	text-align: center;
+}
+
+#content{
+	border: 1px solid #BBBBBB;
+	padding:20px;
+	
+}
+
+#content .info{
+	width:140px;
+	margin-right: 20px;
+	float:right;
+}
+
+.containerPost,
+.containerComments {
+	margin-right: 180px;
+	text-align:justify;
+	margin-bottom:20px;
+	clear:left;
+}
+
+
+
+.body_pop .containerPost, 
+#minipage .containerPost {
+	margin-right: 0px;
+}
+
+.postTitle{
+	font-size:160%;
+}
+
+.containerPost .timestamp,
+.containerComments .timestampComment{
+	font-size:90%;
+	color:#666666;
+	margin: 2px 0px 10px;
+	display:block;
+}
+
+.containerComment{
+	margin-bottom:10px;
+
+}
+.containerPost .dataTitle{
+	background: url("../../inc/icons/attach.png") no-repeat left center;
+	font-weight:bold;
+	line-height:16px;
+
+	padding-left: 18px;
+}
+.containerPost .dataBox{
+	border:2px solid #0071bc;
+	min-height:20px;
+}
+
+
+.containerPost .dataPic{
+	border: 1px solid #0071bc;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 0.75em;
+	margin: 4px;
+	text-align: center;
+}
+
+.containerPost .datathumb{
+	cursor: pointer;
+	float: left;
+	height: 95px;
+	overflow: hidden;
+	text-align: center;
+	width: 100px;
+}
+.containerPost .postInfo{
+		padding-bottom: 15px;
+		padding-top: 25px;
+		text-align: center;
+}
+
+.containerPost .postTools{
+	text-align:right;
+	clear:left;
+}
+.containerPost .postText{
+margin: 0px 00px 0px 0px;
+padding-bottom:1px;
+overflow: auto;
+}
+.containerPost .postText pre{
+overflow: auto;
+}
+.containerPost .postLinkedBut{
+	display:inline;
+	background: url("../../inc/icons/link.png") no-repeat left center;
+	font-weight:bold;
+	line-height:16px;
+	padding-left: 18px;
+	cursor: pointer;
+}
+.containerPost .postLinkedItems{
+		border:2px solid #0071bc;
+		padding:10px;
+		margin: 5px 0px;
+		display: none;
+}
+
+.clear{
+	clear:both;
+}
+.infoSection{
+	font-weight:bold;
+	font-size:120%;
+	margin: 10px 0px 5px 0px;
+}
+
+.searchBox{
+	width: 100%;
+	background: url("../../inc/icons/magnifier.png") no-repeat right center;
+	border: 1px solid #DDD;
+	padding: 3px 18px 3px 3px;
+	
+}
+.postText .searchBox{
+	width: 200px;
+}
+.viewSource{
+	width:99%;
+	height:500px;
+}
+.dialog{
+	border: 2px solid #0071bc;
+	padding:3px;
+}
+
+
+.dashboard_item {
+	margin-top: 5px;
+	width: 350px;
+	float: right;
+	clear: right;
+}
+
+.dialog h2{
+	background: #0071bc;
+	color: white;
+	margin: 0px;
+	padding: 3px;
+	font-weight:normal;
+}
+
+.dialog h2 a{
+	color: white;
+}
+
+#content .exhibit.info{
+	width:190px;
+	margin-right: 0px;
+}
+
+.exhibit.containerPost,
+.exhibit.containerComments {
+	margin-right: 220px;
+}
+
+#postTextarea{
+	width:500px;
+}
+
+
+#openid {
+}
+
+#openid.openpopup{
+	position: absolute;
+	z-index: 1000;
+	top:30px;
+	background:white;
+	padding:5px;
+	border: 1px solid #BBBBBB;
+	margin:0px 20px;
+}
+#openid input.openid_login{
+	background: white url(/openid/openid.gif) no-repeat 0px 50%;
+	padding-left: 18px;
+	width: 220px;
+	background-position: 0px 50%;
+}
+
+.infoBox{
+	padding: 5px;
+	border:2px solid #0071bc;
+}
+
+.table_st{
+	border: 1px solid #0071bc;
+}

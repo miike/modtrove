@@ -1,0 +1,4 @@
+RewriteEngine  on
+RewriteBase    /api/rests
+RewriteCond %{REQUEST_URI} !\.php
+RewriteRule    ^(.*)$      /api/rest/rest.php?uri=$1 

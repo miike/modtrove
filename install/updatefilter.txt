@@ -1,0 +1,12 @@
++ /docs/style/default
++ /docs/style/style.css
++ /docs/style/style_red
+- /docs/style/*
+- /config
+- /config.php
+- /docs/cache
+- /docs/.htaccess
+- /docs/robots.txt
+- /docs/sitemaps
+- /docs/sitemap.xml
+- .DS_Store
