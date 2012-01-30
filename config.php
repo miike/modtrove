@@ -47,6 +47,10 @@
 	/* you change login_openid to login_ldap or login_local */
 	$ct_config['plugins'] = array('login_openid', 'uri_samedb'); 
 	
+	/* what's new plugin */
+	$ct_config['newposts'] = 5;
+	$ct_config['newcomments'] = 5; //number of comments to display on what's new page
+	
 	/* if you are using openid what can a new user do */
 	$ct_config['openid']['default_user_type'] = 1;
 

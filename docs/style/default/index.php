@@ -31,6 +31,7 @@
 		<div id="top_bit">
 			<span style="float:right;">
 				<?php if( is_set_not_empty('user_admin', $_SESSION) && $_SESSION['user_admin'] >= 3 ){ echo "<a href=\"{$ct_config['blog_path']}admin.php\">Admin</a> | "; } ?>
+				<a href="<?php echo $ct_config['blog_path']; ?>recent.php" title="What's New">What's New</a> | 
 				<a href="<?php echo $ct_config['blog_path'];?>">All Blogs</a> | <a href="http://www.labtrove.org/documentation/" title="The Help Guide to the blog">Help</a>
 				 | <a href="http://www.labtrove.org/support.html" title="How get support using LabTrove">Support</a>
 				 | <a href="<?php echo $ct_config['blog_path'];?>about.php" title="About this LabTrove">About</a>

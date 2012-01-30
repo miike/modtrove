@@ -1,4 +1,5 @@
 <?php
+include("../config.php");
 
 /* database functions, currently MySQL flavoured */
 
@@ -168,7 +169,7 @@ function runQuery($sql, $query_desc="")
   {
     // Get the error message.
     $err_msg = mysql_error();
-    $email = "andrew@bluerhinos.co.uk";
+    $email = $ct_config['blog_contact'];
     $ret .=  "<hr />\n";
     $ret .=  "<p>There was a problem running the <b>$query_desc</b> query. Please report the message ";
     $ret .=  "below to the <a href=\"mailto:$email\">webmaster</a>, telling them when and where the problem occurred.</p>";
