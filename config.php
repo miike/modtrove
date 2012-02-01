@@ -51,6 +51,12 @@
 	$ct_config['newposts'] = 5;
 	$ct_config['newcomments'] = 5; //number of comments to display on what's new page
 	
+	/* advanced editor (tinyMCE) plugin */
+	$ct_config['editor_enabled'] = true;
+	
+	/* ChemSpider API functionality, coming soon */
+	$ct_config['chemspiderAPIkey'] = "";
+	
 	/* if you are using openid what can a new user do */
 	$ct_config['openid']['default_user_type'] = 1;
 

@@ -4,6 +4,8 @@ include("../lib/default_config.php");
 
 
 $jquery['fieldselection'] = true;
+$head .= '<script type="text/javascript" src="inc/tinymce/jscripts/tiny_mce/tiny_mce_popup.js"></script >';
+$head .= '<script type="text/javascript" src="inc/tinymce/jscripts/tiny_mce/plugins/linktopost/js/dialog.js"></script>';
 
 checkblogconfig($_SESSION['blog_id']);
 
@@ -115,8 +117,12 @@ $sql .= "\nORDER BY  `bit_datestamp` DESC ";
 $tresult = runQuery($sql,'Fetch Page Groups');
     
     while($row = mysql_fetch_array($tresult)){
-
+	if ($ct_config['editor_enabled']){ //a check is needed here (present)
+	$body .= "<li><a href=\"javascript: InsertDialog.insert('{$row['bit_id']}'); window.close();\">{$row['bit_title']}</a><br/>";
+	}
+	else{
 	$body .= "<li><a href=\"javascript: linktag('{$row['bit_id']}'); window.close();\">{$row['bit_title']}</a><br/>";
+	}
 }
 
 $body .= "<div class=\"clear\"></div>";

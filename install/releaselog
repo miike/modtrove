@@ -1,3 +1,8 @@
+ModTrove 2.2-r2 (2012-02-01)
+
+[*] Adds the option of selecting tinyMCE (WYSIWYG editor) as the default editor
+[*] Adds a What's New page to Labtrove (customisable in config.php)
+
 LabTrove 2.2-r310 (2012-01-25)
 ----------------------------------------------------------------
 [*] Posts: Fixes urls with out http in bbcode parser
