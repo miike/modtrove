@@ -7,12 +7,12 @@
 	}
 	
 	/* Used in setting titles on pages, rss feeds etc*/
-	$ct_config['blog_title'] = "LabTrove";
-	$ct_config['blog_desc'] = "An out of the box instance of LabTrove";
+	$ct_config['blog_title'] = "";
+	$ct_config['blog_desc'] = "An out of the box instance of ModTrove";
 	
 	/* Sets the default style the labtrove instance */
 	/* See wiki for 'how to' to customise */
-	$ct_config['blog_style'] = "default";
+	$ct_config['blog_style'] = "modtrove";
 	
 	/* Setting the defaults for the url of the blog */
 	$ct_config['this_server'] = "localhost";
@@ -48,6 +48,8 @@
 	$ct_config['plugins'] = array('login_openid', 'uri_samedb'); 
 	
 	/* what's new plugin */
+	$ct_config['recentmode'] = "limit"; //either "latest" or "limit", latest is posts from the last 24 hours, limit uses the limits below
+	
 	$ct_config['newposts'] = 5;
 	$ct_config['newcomments'] = 5; //number of comments to display on what's new page
 	
@@ -56,6 +58,16 @@
 	
 	/* ChemSpider API functionality, coming soon */
 	$ct_config['chemspiderAPIkey'] = "";
+	
+	/* user/members list options */
+	$ct_config['userlistenabled'] = true;
+	$ct_config['viewlevel'] = 3; //sets permissions for who can view the member's list (0=all,1=normal user,2=moderator,3=admin)
+	
+	/* enable/disable sortable tables */
+	$ct_config['sortabletables'] = true;
+	
+	/* support for sharing links (fb, twitter, citeulike) */
+	$ct_config['sharelinks'] = true;
 	
 	/* if you are using openid what can a new user do */
 	$ct_config['openid']['default_user_type'] = 1;

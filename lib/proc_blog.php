@@ -239,9 +239,9 @@ $jquery['function'] .= "$('#post_form').validate();\n";
 
 $jquery['code'] .= "var blog_id = {$blog_id};\n";
 
-$blogpost['post'] .="Title<span class=\"formreq\">*</span>  <br/><input type=\"text\" name=\"comment_title\" class=\"comment_title required\" size=\"80\" value=\"".$edittitle."\"/><br/>
+$blogpost['post'] .="Title<span class=\"formreq\">*</span>  <br/><input type=\"text\" name=\"comment_title\" class=\"comment_title required\" size=\"50\" value=\"".$edittitle."\"/><br/>
 
-<br/>Text<span class=\"formreq\">*</span>  <br/><textarea name=\"text\" id=\"bbcode\" cols=\"60\" rows=\"7\" class=\"required\">".$edittext."</textarea><br/>
+<br/>Text<span class=\"formreq\">*</span>  <br/><textarea name=\"text\" id=\"bbcode\" class=\"required\">".$edittext."</textarea><br/>
 <table style='border: 1px solid darkgrey; width: 552px; padding: 10px; margin-bottom: 10px;'><tr><td>
 Section<span class=\"formreq\">*</span><br/>
 <select style='width:150px' name=\"section\" onchange=\"javascript:NewSection();\" class=\"required\"><option value=''></option>";

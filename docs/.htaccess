@@ -13,6 +13,7 @@ RewriteCond %{REQUEST_URI} !^/user
 RewriteCond %{REQUEST_URI} !^/java
 RewriteCond %{REQUEST_URI} !^/openid
 RewriteCond %{REQUEST_URI} !^/uri
+RewriteCond %{REQUEST_URI} !^/userlist
 RewriteCond %{REQUEST_URI} !\.php
 RewriteCond %{REQUEST_URI} !\.class
 RewriteCond %{REQUEST_URI} !\.txt

@@ -381,14 +381,30 @@ Title: <input type=\"text\" name=\"comment_title\" class=\"comment_title\" size=
 		
 		$jquery['markitup'] = true;
 		$jquery['validate'] = true;
+		if ($ct_config['sortabletables']){
+			$jquery['function'] .= "$('table').tablesorter();\n";
+		}
 		$jquery['function'] .= "$('#commentTextarea').markItUp(mySettings);\n";
 		$jquery['function'] .= "$('#comment_form').validate();\n";
 		
+		
 		$text = isset($_REQUEST['text']) ? stripslashes($_REQUEST['text']) : '';
+		//insert share links if enabled
+		if ($ct_config['sharelinks']){
+			$body .= "\t<div class=\"infoSection\">Share</div>\n";
+			$body .= "<span class='st_facebook' displayText='Facebook'></span>\n";
+			$body .= "<span class='st_twitter' displayText='Tweet'></span>\n";
+			$body .= "<span class='st_citeulike' displayText='CiteULike'></span>\n";
+			$body .= "<span class='st_plusone' displayText='Google +1'></span>\n";
+			$body .= "<span class='st_wordpress' displayText='Wordpress'></span>\n";
+			$body .= "<span class='st_email' displayText='Email'></span>\n\n";
+			
+		
+		}
 		$body .= "\t<div class=\"infoSection\">Add comment to Post</div>\n
 			<form action=\"".$blogpost['url']."\" name=\"blog\" method=\"post\" id=\"comment_form\">
 			Title<span class=\"formreq\">*</span>  <br/><input type=\"text\" name=\"comment_title\" class=\"comment_title required\" size=\"80\" value=\"".$commentt."\"/><br/>
-			<br/>Text<span class=\"formreq\">*</span>  <br/><textarea name=\"text\" class=\"commentTextarea required\"  id=\"commentTextarea\" cols=\"60\" rows=\"7\" style=\"height:100px;\">".$text."</textarea><br/><br/><input type=\"submit\" name=\"action_com\" value=\"Submit\"/></form>";
+			<br/>Text<span class=\"formreq\">*</span>  <br/><textarea name=\"text\" class=\"commentTextarea required\"  id=\"commentTextarea\" cols=\"30\" rows=\"7\" style=\"height:100px;\">".$text."</textarea><br/><br/><input type=\"submit\" name=\"action_com\" value=\"Submit\"/></form>";
 
 	}
 	$body .= "</div>";

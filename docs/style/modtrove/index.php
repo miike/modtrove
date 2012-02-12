@@ -7,8 +7,8 @@
 	<base href="<?php echo $ct_config['blog_url'];?>"/>
 	<?php if(isset($head)) echo $head?>
 	<link rel="stylesheet" type="text/css" href="<?php echo $ct_config['blog_path']; ?>style/style.css"/>
-	<link rel="stylesheet" type="text/css" href="<?php echo $ct_config['blog_path']; ?>style/default/style.css"/>
-	<link rel="stylesheet" type="text/css" href="<?php echo $ct_config['blog_path']; ?>style/default/table.css"/>
+	<link rel="stylesheet" type="text/css" href="<?php echo $ct_config['blog_path']; ?>style/modtrove/style.css"/>
+	<link rel="stylesheet" type="text/css" href="<?php echo $ct_config['blog_path']; ?>style/modtrove/table.css"/>
 	<?php if($ct_config['blog_style']!="default"){ ?>
 	<link rel="stylesheet" type="text/css" href="<?php echo $ct_config['blog_path']; ?>style/<?php echo $ct_config['blog_style']?>/style.css"/>
 	<?php } ?>

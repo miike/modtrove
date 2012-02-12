@@ -70,8 +70,9 @@ global $ct_config;
 	// Remove our padding..
 	$ret = substr($ret, 1);
 
-
-	return (str_replace("\n", "<br style=\"clear:left;\"/>",str_replace("\r", "",$ret)));
+	//the line below seems to screw tables up.
+	//return (str_replace("\n", "<br style=\"clear:left;\"/>",str_replace("\r", "",$ret)));
+	return (str_replace("\n", "",str_replace("\r", "",$ret)));
 }
 
 
@@ -460,8 +461,10 @@ global $jquery;
 		$('.searchBox').blur(function() {
 				var q = $(this).val();
 				if(q=='')	$(this).val('Search');
-	      });
-";
+	      });";
+	if ($ct_config['sortabletables']){
+		$jquery['function'] .= "\n$('table').tablesorter();\n";
+	}
 
 break;
 case "thispost";
@@ -572,6 +575,25 @@ function clear_blog_cache($id){
 global $ct_config;
 $sql = "UPDATE  `{$ct_config['blog_db']}`.`blog_bits` SET `bit_cache` =  '' WHERE  `blog_bits`.`bit_id` = {$id} AND `bit_edit` = 0 LIMIT 1 ;";
 runQuery($sql,'Clear Cache');
+}
+
+function detAttachment($bittitle){ //determine if a post has attachments or not
+	$query = "SELECT `bit_meta`, `bit_rid` FROM `blog_bits` WHERE `bit_title` = '" . mysql_real_escape_string($bittitle) . "' ORDER BY `bit_rid` DESC LIMIT 1";
+	$result = runQuery($query, "fetch metadata");
+	if (mysql_num_rows($result) > 0){
+		$row = mysql_fetch_assoc($result);
+		$metadata = $row['bit_meta'];
+		$pos = strpos($metadata, "<DATA>");
+		if ($pos !== false){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+	else{
+		return false;
+	}
 }
 
 include('functions/metameta.php');

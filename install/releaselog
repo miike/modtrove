@@ -1,3 +1,14 @@
+ModTrove 2.2-r3 (2012-02-12)
+[*] Fixes a tinyMCE 'reason for edit' bug
+[*] Fixes Labtrove replace bug
+[*] Adds support for sortable tables using jQuery (see documentation on how to insert sortable tables)
+[*] Adds greater customisation for the What's New page, now outputs authors as well as the blog a post was posted in
+[*] Added support for sharing services when viewing a page. Share to Facebook, Twitter, CiteULike, Google Plus, Wordpress or Email.
+[*] Fixed tinyMCE overflow
+[*] Attachment icon now shows next to post title for posts that have an attachment(s)
+[*] Added new theme
+[*] Added members list with security options
+
 ModTrove 2.2-r2 (2012-02-01)
 
 [*] Adds the option of selecting tinyMCE (WYSIWYG editor) as the default editor
