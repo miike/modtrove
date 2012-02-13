@@ -5,8 +5,8 @@ html{
 }
 
 body{
-	background-image: url("background.jpg");
-	background-repeat: repeat-y;
+	/*background-image: url("background.jpg");
+	background-repeat: repeat-y;*/
 	margin:0px;
 	padding:0px;
 	font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Helvetica, Arial, sans-serif;

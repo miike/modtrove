@@ -97,7 +97,7 @@ $result = runQuery($query, "recent posts");
 while ($row = mysql_fetch_assoc($result)){ //this selects the most recent blog posts
 	$name = getName($row['bit_user']);
 	$blogdetails = blogName($row['bit_blog']);
-	$blogpost['post'] .= "<a href='user/" . $row['bit_user'] . "'>" . $name . "</a> posted " . "<a href='uri/" . dechex($row['bit_uri']) . "'>" . $row['bit_title'] . "</a>   " . nicetime($row['bit_timestamp']) . " in <a href='/" . $blogdetails['sname'] . "' alt='" . $blogdetails['desc'] . "'>" . $blogdetails['name'];
+	$blogpost['post'] .= "<a href='user/" . $row['bit_user'] . "'>" . $name . "</a> posted " . "<a href='uri/" . dechex($row['bit_uri']) . "'>" . $row['bit_title'] . "</a>   " . nicetime($row['bit_timestamp']) . " in <a href='/" . $blogdetails['sname'] . "' alt='" . $blogdetails['desc'] . "'>" . $blogdetails['name'] . "</a>";
 	
 	$blogpost['post'] .= "</br>";
 }

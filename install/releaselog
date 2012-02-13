@@ -1,3 +1,7 @@
+ModTrove 2.2-r4 (2012-02-13)
+[*] Minor bug fixes
+[*] .htaccess fixes
+
 ModTrove 2.2-r3 (2012-02-12)
 [*] Fixes a tinyMCE 'reason for edit' bug
 [*] Fixes Labtrove replace bug
