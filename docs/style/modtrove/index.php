@@ -32,7 +32,7 @@
 		<div id="top_bit">
 			<span style="float:right;">
 				<?php if( is_set_not_empty('user_admin', $_SESSION) && $_SESSION['user_admin'] >= 3 ){ echo "<a href=\"{$ct_config['blog_path']}admin.php\">Admin</a> | "; } ?>
-				<a href="<?php echo $ct_config['blog_path']; ?>recent" title="What's New">What's New</a> | 
+				<a href="<?php echo $ct_config['blog_path']; ?>recent.php" title="What's New">What's New</a> | 
 				<a href="<?php echo $ct_config['blog_path'];?>">All Blogs</a> | <a href="http://www.labtrove.org/documentation/" title="The Help Guide to the blog">Help</a>
 				 | <a href="http://www.labtrove.org/support.html" title="How get support using LabTrove">Support</a>
 				 | <a href="<?php echo $ct_config['blog_path'];?>about.php" title="About this LabTrove">About</a>
@@ -53,5 +53,17 @@
 	Powered by <a href="http://labtrove.org">labtrove 2.2</a> &copy; University of Southampton
 	</div>
 </div>
+<!-- Piwik --> 
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://103.1.186.131/piwik/" : "http://103.1.186.131/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://103.1.186.131/piwik/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
 </body>
 </html>

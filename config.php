@@ -15,7 +15,7 @@
 	$ct_config['blog_style'] = "modtrove";
 	
 	/* Setting the defaults for the url of the blog */
-	$ct_config['this_server'] = "localhost";
+	$ct_config['this_server'] = "";
 	$ct_config['blog_path'] = "/";
 	$ct_config['blog_protocol'] = "http"; /* Change to https if over https*/
 	$ct_config['blog_url'] = "{$ct_config['blog_protocol']}://{$ct_config['this_server']}{$ct_config['blog_path']}";
@@ -29,8 +29,8 @@
 
 	/* database connections*/
 	$ct_config['blog_host'] = "localhost";
-	$ct_config['blog_user'] = "example";
-	$ct_config['blog_pass'] = "password";
+	$ct_config['blog_user'] = "dbuser";
+	$ct_config['blog_pass'] = "dbpassword";
 	$ct_config['blog_db'] = "labtrove";
 
 	/* Security for whole blog, 0 = public, 1 = Logged in users only */
@@ -56,8 +56,11 @@
 	/* advanced editor (tinyMCE) plugin */
 	$ct_config['editor_enabled'] = true;
 	
-	/* ChemSpider API functionality, coming soon */
-	$ct_config['chemspiderAPIkey'] = "";
+	/* ChemSpider API functionality*/
+	$ct_config['enablepredictive'] = true;
+	$ct_config['chemspiderAPIkey'] = "yourkeyhere";
+	$ct_config['wolframappID'] = "yourappidhere";
+	
 	
 	/* user/members list options */
 	$ct_config['userlistenabled'] = true;

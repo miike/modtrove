@@ -239,12 +239,29 @@ $jquery['function'] .= "$('#post_form').validate();\n";
 
 $jquery['code'] .= "var blog_id = {$blog_id};\n";
 
-$blogpost['post'] .="Title<span class=\"formreq\">*</span>  <br/><input type=\"text\" name=\"comment_title\" class=\"comment_title required\" size=\"50\" value=\"".$edittitle."\"/><br/>
+//below, modified to include chemicalise
+$blogpost['post'] .="Title<span class=\"formreq\">*</span>  <br/><input type=\"text\" name=\"comment_title\" class=\"comment_title required\" size=\"50\" value=\"".$edittitle."\"/><br/><br/>Text<span class=\"formreq\">*</span>  <br/><textarea name=\"text\" id=\"bbcode\" class=\"required\">".$edittext."</textarea><br/>
+";
 
-<br/>Text<span class=\"formreq\">*</span>  <br/><textarea name=\"text\" id=\"bbcode\" class=\"required\">".$edittext."</textarea><br/>
-<table style='border: 1px solid darkgrey; width: 552px; padding: 10px; margin-bottom: 10px;'><tr><td>
-Section<span class=\"formreq\">*</span><br/>
-<select style='width:150px' name=\"section\" onchange=\"javascript:NewSection();\" class=\"required\"><option value=''></option>";
+if ($ct_config['enablepredictive']){
+$blogpost['post'] .= 
+"<select class='chemicalise' onclick='identify();'>
+<option value=' '>- Select Property -</option>
+<option value='inchi'>InChI</option>
+<option value='inchikey'>InChIKey</option>
+<option value='mol'>MolFile</option>
+<option value='csid'>Chemspider ID</option>
+<option value='csidlink'>Chemspider Link</option>
+<option value='basic'>Basic Properties</option>
+<option value='identifiers'>Other Identifiers</option>
+<option value='thermo'>Thermodynamic properties</option>
+</select>
+<input type='checkbox' id='tablise' name='tablise' />Output as table
+<div id='predictive'></div>";
+};
+
+$blogpost['post'] .= "<table style='border: 1px solid darkgrey; width: 552px; padding: 10px; margin-bottom: 10px;'><tr><td>
+Section<span class=\"formreq\">*</span><br/><select style=\"width:150px\" name=\"section\" onchange=\"javascript:NewSection();\" class=\"required\"><option value=''></option>";
 
 $found = 0;
 if(isset($bloggroups)){

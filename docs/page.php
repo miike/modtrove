@@ -43,22 +43,22 @@ if(!isset($minipage) || !$minipage)
 		
 		if($ct_config['editor_enabled']){
 			$jquery['srcs'] .= "<script type=\"text/javascript\" src=\"{$ct_config['blog_path']}inc/js/jquery.tablesorter.min.js\"></script>\n";
+			$jquery['srcs'] .= "<script type=\"text/javascript\" src=\"{$ct_config['blog_path']}inc/js/jquery.chemistry.js\"></script>\n";
 			$jquery['srcs'] .= "<script type=\"text/javascript\" src=\"{$ct_config['blog_path']}inc/tinymce/jscripts/tiny_mce/tiny_mce.js\"></script>\n";
 			$jquery['srcs'] .= "<script type=\"text/javascript\" src=\"{$ct_config['blog_path']}inc/tinymce/jscripts/tiny_mce/tiny_mce_src.js\"></script>\n";
 		$jquery['srcs'] .= "<script type=\"text/javascript\" src=\"{$ct_config['blog_path']}inc/tinymce/jscripts/tiny_mce/jquery.tinymce.js\"></script>\n";
 		$jquery['srcs'] .= '<script type="text/javascript">
-				tinyMCE.init({
+				$(function() {
+					$(\'#bbcode\').tinymce({
+					script_url : \'' . $ct_config['blog_url'] . 'inc/tinymce/jscripts/tiny_mce/tiny_mce.js\',
 					// General options
-					mode : "exact",
-					elements : "bbcode",
 					theme : "advanced",
-					width: "400",
-					plugins : "pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,linktopost",
+					plugins : "pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,linktopost,tablegrid",
 
 					// Theme options
 					theme_advanced_buttons1 : "save,newdocument,|,bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,|,styleselect,formatselect,fontsizeselect",
 					theme_advanced_buttons2 : "cut,copy,paste,pastetext,pasteword,|,search,replace,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,link,unlink,image,cleanup,code,|,insertdate,inserttime,",
-					theme_advanced_buttons3 : "tablecontrols,|,hr,removeformat,visualaid,|,sub,sup,|,charmap,iespell,media,advhr,|,print,fullscreen",
+					theme_advanced_buttons3 : "tablegrid,|,row_props,cell_props,|,row_before,row_after,delete_row,|,col_before,col_after,|,hr,removeformat,visualaid,|,sub,sup,|,charmap,iespell,media,advhr,|,print,fullscreen",
 					theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,styleprops,|,cite,abbr,acronym,del,ins,attribs,|,visualchars,nonbreaking,template,pagebreak|,linktopost",
 					theme_advanced_toolbar_location : "top",
 					theme_advanced_toolbar_align : "left",
@@ -75,7 +75,8 @@ if(!isset($minipage) || !$minipage)
 					external_link_list_url : "js/link_list.js",
 					external_image_list_url : "js/image_list.js",
 					media_external_list_url : "js/media_list.js",
-
+					
+					});
 				});
 				</script>';
 		
@@ -86,7 +87,7 @@ if(!isset($minipage) || !$minipage)
 		}
 		if( !isset($head) ) { $head = ""; }
 		$head .= <<<END
-				<script type="text/javascript" src="{$ct_config['blog_path']}inc/jquery/js/jquery-1.4.2.min.js"></script>
+				<script type="text/javascript" src="{$ct_config['blog_path']}inc/jquery/js/jquery-1.7.1.min.js"></script>
 				<script type="text/javascript" src="{$ct_config['blog_path']}inc/jquery/js/jquery-ui-1.8.2.custom.min.js"></script>
 				<script type="text/javascript" src="{$ct_config['blog_path']}inc/jquery/js/jquery.textarea-expander.js"></script>
 				{$jquery['srcs']}
